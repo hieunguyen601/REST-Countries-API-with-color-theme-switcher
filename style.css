@@ -88,6 +88,18 @@ header {
     color: var(--dark-mode-text-and-light-mode-elements);
 }
 
+.light {
+    display: none;
+}
+
+.light.active {
+    display: block;
+}
+
+.dark.active {
+    display: none;
+}
+
 body.active {
     background-color: var(--dark-mode-background);
     color: var(--dark-mode-text-and-light-mode-elements);
