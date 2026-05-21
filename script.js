@@ -1,4 +1,5 @@
-const theme_mode = document.querySelector(".theme-mode");
+const darkBtn = document.querySelector(".dark.theme-mode");
+const lightBtn = document.querySelector(".light.theme-mode");
 const header = document.querySelector("header");
 const body = document.querySelector("body");
 const searchInput = document.querySelector(".search-input");
@@ -7,10 +8,18 @@ const filterBox = document.getElementById('regions');
 
 let allData = [];
 
-theme_mode.addEventListener("click", () => {
-  body.classList.toggle("active");
-  header.classList.toggle("active");
-  theme_mode.classList.toggle("active");
+darkBtn.addEventListener("click", () => {
+  body.classList.add('active');
+  header.classList.add('active');
+  darkBtn.classList.add('active');
+  lightBtn.classList.add('active');
+});
+
+lightBtn.addEventListener("click", () => {
+  body.classList.remove("active");
+  header.classList.remove("active");
+  darkBtn.classList.remove("active");
+  lightBtn.classList.remove('active');
 });
 
 function render(items) {
